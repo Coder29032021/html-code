@@ -1,1 +1,25 @@
+ HTML <textarea> element represents a multi-line plain-text editing control, 
+ useful when you want to allow users to enter a sizeable amount of free-form text, 
+ for example a comment on a review or feedback form.
 
+		<div>
+			<label for="message">Message:</label>
+			<textarea id="message" name="message"></textarea>
+		</div>
+    
+    	<h2>Boolean Attributes</h2>
+	<p>Here are some disabled, readonly, and checked attribute examples.</p>
+	<form action="/some-server-location" method="post">
+		<div>
+			<input type="checkbox" id="hasCar" name="hasCar" checked>
+			<label for="hasCar">Default checked</label>
+		</div>
+		<div>
+			<label for="dbid">ID (readonly):</label>
+			<input type="text" id="dbid" name="dbid" readonly value="5">
+		</div>
+		<div>
+			<label for="distext">Disabled:</label>
+			<input type="text" id="distext" name="distext" disabled value="This is disabled"></input>
+		</div>
+	</form>
