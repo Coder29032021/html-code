@@ -8,3 +8,34 @@ function           repeatStr   (value  , times  ) {
     [return keyword] [value]
 }
 */
+
+const one = 1;
+// `one` is defined in global scope
+// global scope cannot see `two`, `three`, or `four`
+// global scope can see the outer function definition
+
+function outer() {
+
+    const two = 2;
+    // `two` is defined in outer's scope
+    // outer can see `one` and `two`
+    // but not `three` or `four`
+    // outer scope can see the mid function
+
+    function mid() {
+
+        const three = 3;
+        // `three` is defined in mid's scope
+        // mid can see see `one`, `two`, and `three`
+        // but not `four`
+        // mid can see the inner and outer functions
+
+        function inner() {
+            const four = 4;
+            // `four` is defined in inner's scope
+            // inner can see `one`, `two`, `three`, and `four`
+            // inner can see outer and mid function
+            console.log(one, two, three, four);
+        }
+    }
+}
