@@ -1,4 +1,16 @@
- HTML <textarea> element represents a multi-line plain-text editing control, 
+doesn't have to be in a div 
+</div>
+		<fieldset>
+			<legend>Pick a color</legend>
+			<input type="radio" id="radiored" name="radiocolor" value="r">
+			<label for="radiored">red</label><br>
+			<input type="radio" id="radiogreen" name="radiocolor" value="g">
+			<label for="radiogreen">green</label><br>
+			<input type="radio" id="radioblue" name="radiocolor" value="b">
+			<label for="radioblue">blue</label>
+		</fieldset>
+		
+HTML <textarea> element represents a multi-line plain-text editing control, 
  useful when you want to allow users to enter a sizeable amount of free-form text, 
  for example a comment on a review or feedback form.
 
