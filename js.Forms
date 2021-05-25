@@ -1,0 +1,10 @@
+/*
+function           repeatStr   (value  , times  ) {
+[function keyword] [identifier]([parm1], [parm2]) {
+
+    [body]
+
+    return           result;
+    [return keyword] [value]
+}
+*/
