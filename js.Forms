@@ -39,3 +39,13 @@ function outer() {
         }
     }
 }
+
+function outer() {
+    const outerState = "lilac";
+    return function () {
+        // this anonymous function closes over `outerState`
+        // even after outer's state is gone, 
+        // `outerState` will still be available via this function
+        return "tulip " + outerState;
+    };
+}
