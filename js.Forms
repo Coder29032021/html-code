@@ -1,51 +1,31 @@
 /*
-function           repeatStr   (value  , times  ) {
-[function keyword] [identifier]([parm1], [parm2]) {
-
-    [body]
-
-    return           result;
-    [return keyword] [value]
-}
+Arrow function syntax is:
+(name  )  =>     `Hello, ${name}!`     ;
+([parm]) [arrow] [expression to return];
 */
 
-const one = 1;
-// `one` is defined in global scope
-// global scope cannot see `two`, `three`, or `four`
-// global scope can see the outer function definition
+const greet = (name) => `Hello, ${name}!`;
+console.log(greet("Ayishat")); // "Hello, Ayishat!"
 
-function outer() {
+/*
+Arrow functions can include multiple statements if a code block is included. 
+In that case, the `return` keyword is required.
+(a      , b      , c      ) =>      {
+([parm1], [parm2], [parm3]) [arrow] [code block];
+    return           "value";
+    [return keyword] [value];
+}          ;
+[end block];
+*/
 
-    const two = 2;
-    // `two` is defined in outer's scope
-    // outer can see `one` and `two`
-    // but not `three` or `four`
-    // outer scope can see the mid function
+const minOfThree = (a, b, c) => {
+   let min = Math.min(a, b);
+   min = Math.min(min, c);
+   return min;
+};
 
-    function mid() {
+FindByIndex - retruns elements that starts with 'u'
+FIND-reutrns index of element that start with y
+filter (linq) -> const flies = beelike.filter(b => b.includes("fly"));
+map - transforming an array; reducing = aggregation 
 
-        const three = 3;
-        // `three` is defined in mid's scope
-        // mid can see see `one`, `two`, and `three`
-        // but not `four`
-        // mid can see the inner and outer functions
-
-        function inner() {
-            const four = 4;
-            // `four` is defined in inner's scope
-            // inner can see `one`, `two`, `three`, and `four`
-            // inner can see outer and mid function
-            console.log(one, two, three, four);
-        }
-    }
-}
-
-function outer() {
-    const outerState = "lilac";
-    return function () {
-        // this anonymous function closes over `outerState`
-        // even after outer's state is gone, 
-        // `outerState` will still be available via this function
-        return "tulip " + outerState;
-    };
-}
